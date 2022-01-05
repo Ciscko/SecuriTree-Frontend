@@ -168,7 +168,7 @@ class ActionDataTable extends React.Component {
                                 <div className="input-field col l5 m5 s12 offset-l3 offset-m3" style={{ 'paddingLeft': '30px', 'paddingRight': '30px' }}>
                                     <i className="material-icons prefix">search</i>
                                     <input data-testid="search-input" onChange={(e) => this.filterRows(e.target.value)} name="filter" value={this.state.searchVal} type="text" id="filter" />
-                                    <label htmlFor="filter" style={{ 'paddingLeft': '30px', 'paddingRight': '30px' }}>Click on column header and start typing...</label>
+                                    <label htmlFor="filter" style={{ 'paddingLeft': '30px', 'paddingRight': '30px' }}>Click column-header and start typing</label>
                                 </div>
                             </div>
 
