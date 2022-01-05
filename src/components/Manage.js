@@ -49,6 +49,7 @@ const Manage = () => {
                 M.toast({html: 'Successfully set Door-Status!', classes:'green'});
             setSubmiting(false)
             }else{
+                navObj('/manage')
                 //M.toast({html: 'You are probably not logged in. Please do.', classes:'red'});
                 //window.location.href = constants.url+'manage'
             }

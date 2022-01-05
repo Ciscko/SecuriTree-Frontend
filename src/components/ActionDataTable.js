@@ -264,12 +264,14 @@ class ActionDataTable extends React.Component {
                                     </>
                                     :
                                     <div className="center container">
-                                        <div className="card row center">
-                                            <br></br><br></br>
-                                            <div className='row center'>
-                                                No data available.
+                                        <div className="row center">
+                                            <br></br>
+                                            <div className='row card center'>
+                                            <br></br>
+                                                <Preloader message="No data available."/>
+                                                <br></br>
                                             </div>
-                                            <br></br><br></br>
+                                            <br></br>
                                         </div>
                                     </div>
                             }

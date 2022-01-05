@@ -45,8 +45,9 @@ const Dataupload = () => {
                         nav('/upload');
                         M.toast({html: res.status, classes:'green'});
                     }else{
+                        nav('/upload');
                         M.toast({html: 'Something went wrong!', classes:'red'});
-                        window.location.href = constants.url+'upload';
+                        //window.location.href = constants.url+'upload';
                     }
                 }).catch(err => {
                     console.log(err);
