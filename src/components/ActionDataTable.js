@@ -12,7 +12,7 @@ class ActionDataTable extends React.Component {
         this._isMounted = false;
         this.columns = props.columns;
         this.state = {
-            perPage: 10, sort: true, activeSort: this.columns[0].key, filteredData: [],
+            perPage: 50, sort: true, activeSort: this.columns[0].key, filteredData: [],
             currentPage: 0, currentPageData: [], data: [], searchVal: '', approving: false, deleteId: ''
         }
         this.selectRef = createRef()
