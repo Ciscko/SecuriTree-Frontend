@@ -47,7 +47,7 @@ const Login = () => {
             <div className='row'>
                 <div style={{marginTop:'16%'}} className='col m6 l6 s10 offset-m3 offset-l3 offset-s1 card center'>
                     <br></br><br></br>
-                    <h5 className='teal-text'>LOGIN</h5>
+                    <h5 className='teal-text'>Welcome to SecuriTree</h5>
                     <form>
                         <div className="input-field col s10 offset-s1">
                             <input placeholder='Username' data-testid='username' id="username" min={1} value={username} onChange={(e) => setUser(e.target.value)} type="text" name='username' required className="validate" />
