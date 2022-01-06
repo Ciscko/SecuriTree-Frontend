@@ -18,5 +18,9 @@ Checkout this link on how to install Docker: https://docs.docker.com/desktop/win
 
 That is it for running the frontend, open your browser and navigate to http://localhost:4000/, the app is rendered but you cannot login if the Backend API is not set up yet. Let's go to the backend repo to install the backend API. 
 
+7. If the Backend app is installed, open the browser and login to the app using the superuser credentials.
+8. Navigate to the Upload data page and on the USERS DATA Tab, upload the users_data.json file then on the SYSTEM DATA Tab upload system_data.json.
+9. Cheers! You are set up, now you can navigate the Manage Doors page or the View Hierarchy page.
+
 
 
