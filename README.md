@@ -5,6 +5,11 @@ It authenticates and fetches the data from the backend API, displays the Securit
 
 This frontend makes it easy for a user to manage the SecuriTree entities: doors and areas. A user can update the hierarchy and the entity details by uploading a new JSON file into the system data field. They can easily search for a door, see it's status and update the status as either closed or open.
 
+The high-level overview of the whole application is as shown below:
+
+![ARCHITECTURE](https://user-images.githubusercontent.com/32708966/148316842-5f39fb6d-25c8-451a-aef7-7bb07abfe76e.png)
+
+
 STEPS ON HOW TO INSTALL ON YOUR PC?
 1. This is a containerized app using Docker, as a pre-requisite you must install Docker on your PC. 
 Checkout this link on how to install Docker: https://docs.docker.com/desktop/windows/install/ 
