@@ -1,7 +1,6 @@
 const constants = {
-     base_url :  'https://infinite-hamlet-61178.herokuapp.com/api/',
-     //base_url :  'http://127.0.0.1:8000/api/',
-     url: 'https://hidden-savannah-45270.herokuapp.com/'
+     base_url :  process.env.REACT_APP_API_URL,
+     url: process.env.REACT_APP_APP_URL
 }
 
 export default constants;
