@@ -1,9 +1,10 @@
 import React from 'react';
 
 const Buildhierarchy = ({name, child_areas, child_area_ids,doors, access_rules}) => {
-    //console.log('PROPS',name, child_areas, child_area_ids,doors, access_rules)
-    //const  = props.areas
-    //console.log('PROPS',name, child_areas, child_area_ids,doors, access_rules)
+    /* Recursive function/component to display the areas hierarchy: the base case is
+     to render the details of the area without children, 
+     else pass all the children to the component to render the base case or their children
+     */
     return (
         name && access_rules && doors ?
         <div key={name} style={{paddingLeft:'7%'}}>
