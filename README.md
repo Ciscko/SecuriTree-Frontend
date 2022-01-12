@@ -27,5 +27,9 @@ That is it for running the frontend, open your browser and navigate to http://lo
 8. Navigate to the Upload data page and on the USERS DATA Tab, upload the users_data.json file then on the SYSTEM DATA Tab upload system_data.json.
 9. Cheers! You are set up, now you can navigate the Manage Doors page or the View Hierarchy page.
 
+HIERARCHY BUILD RECURSION ALGORITHM
+
+![Recusive render](https://user-images.githubusercontent.com/32708966/149041578-28920c8e-d7bb-4d80-94f3-04dd2ef325f8.png)
+
 
 
