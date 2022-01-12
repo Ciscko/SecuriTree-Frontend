@@ -11,6 +11,19 @@ The high-level overview of the whole application is as shown below:
 
 
 STEPS ON HOW TO INSTALL ON YOUR PC?
+
+METHOD ONE:
+
+Ensure you have docker installed on your PC, since the application is containerized.
+Open the CMD and run the following:
+
+ 1. o docker run --name sec-front -p 3000:80 -d francoudev/securitree-repo:securitree-frontend
+ 2. o docker run --name sec-back -e SUPERUSER_USERNAME=yourusername -e SUPERUSER_PASSWORD=yourpassword -p 8000:8000 -d francoudev/securitree-repo:securitree-backend
+
+This pulls the application images from docker hub and runs the applications. The superuser credentials to login to the application can be obtained from the owner of the docker repository. Open the browser and navigate to http://localhost:3000. Alternatively to set your own superuser credentials, you can clone this repo, set your own credentials in the .env environment variables and rebuild the image then run. How to do this? See method 2 below.
+
+METHOD TWO
+
 1. This is a containerized app using Docker, as a pre-requisite you must install Docker on your PC. 
 Checkout this link on how to install Docker: https://docs.docker.com/desktop/windows/install/ 
 
