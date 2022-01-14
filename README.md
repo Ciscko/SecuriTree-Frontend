@@ -5,6 +5,38 @@ It authenticates and fetches the data from the backend API, displays the Securit
 
 This frontend makes it easy for a user to manage the SecuriTree entities: doors and areas. A user can update the hierarchy and the entity details by uploading a new JSON file into the system data field. They can easily search for a door, see it's status and update the status as either closed or open.
 
+The frontend application is build by the following UI javascript-reactjs components: 
+
+ 1. Nav.js - This renders the navigation bar and the title for every page. It also has a lifecycle function that is used to check if a user is authenticated through reaching the  API with the available token; if authenticated, it proceeds to render the header and consequently allows rendering of a page. If a user is not authenticated, it redirects the    user to the login page.
+ 2. Login.js - This renders the login form. Upon clicking the submit, this component authenticates the user by reaching the API with the credentials. If user is successfully logged in, the Login.js has a callback function that stores the access tokens in the localStorage of the browser. This token is used in other requests to the API.
+ 3. Dashboard.js - This renders the links to the other pages. It is the home page component.
+ 4. DataUpload.js - This component renders the forms used to upload the data: system data and users data to the backend api storage.
+ 5. Hierarchy.js - This renders and presents the Securitree entities as a Hierarchy.
+ 6. Manage.js - This component renders a list of Doors in a table. It renders an input field for searching for Door using the name or id. It provides a button for each door to allow update the status of the door as either closed or open.
+ 
+ 8. BuildHierarchy.js - This component uses a Recursion formula to render the hierarchy data as a tree structure. The base base is to render an area details without children areas. Then it iterates through the children areas and renders each by passing the object to itself(recursion). This will build a tree for any object regardless of the depth.
+ 
+![Recusive render](https://user-images.githubusercontent.com/32708966/149041578-28920c8e-d7bb-4d80-94f3-04dd2ef325f8.png).
+
+Reactjs is a modern javascript library that enables a user interface to have seamless interactivity. Navigation from one page to another does not need a reload of the whole html page but only some parts of the virtual document object model are rendered while others are replaced.
+
+Therefore this application is a Single-page Application since the whole ui functionality is performed on the same UI. 
+Once the application is build, the javascript bundle is loaded into the html file and the whole functionality is that javascript bundle.
+
+AUTHENTICATION
+
+Authentication uses the Bearer token. Upon sending the user credentials, the frontend receives the access token. It stores the token in localStorage. Every time the frontend is querying the API, it will fetch the token from the browser and append the token in the headers of the request. When the backend the receives a request with valid access token, it will succesfully serve the client with the requested service.
+
+![lOGIN](https://user-images.githubusercontent.com/32708966/149499826-13041562-3b6e-4f3d-b6fb-e5f6fdfab6ee.png)
+
+
+TESTING
+
+The unit tests for this UI components was done using javascript test runner JEST and using React Testing Library which allows to make the assertions for testing functions.
+The tests files are found inside the src/__tests__ folder.
+
+APPLICATION OVERVIEW
+
 The high-level overview of the whole application is as shown below:
 
 ![ARCHITECTURE](https://user-images.githubusercontent.com/32708966/148316842-5f39fb6d-25c8-451a-aef7-7bb07abfe76e.png)
@@ -40,9 +72,6 @@ That is it for running the frontend, open your browser and navigate to http://lo
 8. Navigate to the Upload data page and on the USERS DATA Tab, upload the users_data.json file then on the SYSTEM DATA Tab upload system_data.json.
 9. Cheers! You are set up, now you can navigate the Manage Doors page or the View Hierarchy page.
 
-HIERARCHY BUILD RECURSION ALGORITHM
-
-![Recusive render](https://user-images.githubusercontent.com/32708966/149041578-28920c8e-d7bb-4d80-94f3-04dd2ef325f8.png)
 
 
 
